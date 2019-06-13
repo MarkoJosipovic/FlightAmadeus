@@ -1,0 +1,90 @@
+﻿@model IEnumerable<Flight_Low_fare_Search.Models.InfoLet>
+
+
+<table class="table">
+    <tr>
+
+        <th>
+            @Html.DisplayNameFor(model => model.departure)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.datumPolaska)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.polazakPresjedanje)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.polazakPresjedanjeDatum)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dolazakPresjedanje)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dolazakPresjedanjeDatum)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.arrival)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.datumDolaska)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.brojPresjedanja)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.brojSlobodnihMjesta)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cijena)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.valuta)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.departure) ->
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.datumPolaska)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.polazakPresjedanje) ->
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.polazakPresjedanjeDatum)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dolazakPresjedanje) ->
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dolazakPresjedanjeDatum)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.arrival) ->
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.datumDolaska)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.brojPresjedanja)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.brojSlobodnihMjesta)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cijena)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.valuta)
+        </td>
+
+    </tr>
+}
+
+</table>

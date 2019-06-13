@@ -1,0 +1,61 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+<div class="col-md-12">
+
+
+    <h2>Flight low-fare pretraga: </h2>
+    <div class="col-md-2">
+        <p>Polaziste(IATA kod): </p> <input type="text" minlength="3" maxlength="3" id="departure" required/>
+    </div>
+    <div class="col-md-2">
+        <p>Dolaziste(IATA kod):</p><input type="text" id="arrival" />
+    </div>
+    <div class="col-md-2">
+        <p>Datum polaska:</p> <input type="text" id="datepicker">
+    </div>
+    <div class="col-md-2">
+        <p>Datum dolaska:</p> <input type="text" id="datepicker2">
+    </div>
+    <p>Valuta:</p>
+    <div class="col-md-2">
+        <select name="Valute" id="valuta">
+            <option value="1">EUR</option>
+            <option value="2">USD</option>
+            <option value="3">HRK</option>
+        </select>
+    </div>
+
+    <div class="col-md-2" style="margin-bottom:5px;">
+        <button type="submit" class="btn btn-success" style="width:200px; margin-bottom:10px;" id="pretrazi">Pretraga</button>
+    </div>
+
+    @section scripts{
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script>
+            $(function ($) { // wait until the DOM is ready
+                var dateToday = new Date();
+                $("#datepicker").datepicker({
+                    minDate: dateToday
+                }).datepicker("setDate", dateToday);
+
+                $("#datepicker2").datepicker({
+                    minDate: dateToday,
+                    startDate: dateToday
+                }).datepicker("setDate", dateToday);
+            });
+        </script>
+        <script src="~/Scripts/App/pretragaClick.js"></script>
+    }
+
+    <div id="results"></div>
+</div>
