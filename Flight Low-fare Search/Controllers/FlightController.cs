@@ -7,17 +7,11 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Web;
 using System.Web.Mvc;
-using System.Threading.Tasks;
-using System.Threading;
-using System.Collections.Specialized;
 using RestSharp;
 using RestSharp.Authenticators;
 using Flight_Low_fare_Search.Models;
 using System.Web.Caching;
 using Newtonsoft.Json;
-using System.Web.Script.Serialization;
-using System.Runtime.Serialization.Json;
-using System.Text;
 using Newtonsoft.Json.Linq;
 
 namespace Flight_Low_fare_Search.Controllers
